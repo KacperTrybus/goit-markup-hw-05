@@ -19,8 +19,8 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--font-color);
-  /* width: 1600px;
-  margin: 0px auto; */
+  max-width: 1600px;
+  margin: 0px auto;
 }
 
 /* pseudoklasy */
