@@ -302,7 +302,6 @@ body {
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-color: var(--bg-color);
 }
 .middle-text-box {
   margin: 106px 252px 30px 252px;
