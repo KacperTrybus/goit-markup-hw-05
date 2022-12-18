@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zadanie domowe 4</title>
+    <title>Zadanie domowe 5</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -72,7 +72,7 @@
             </h1>
 
             <div class="button-pos">
-              <button type="button" class="main-button">Zamów usługe</button>
+              <button type="button" data-modal-open class="main-button">Zamów usługe</button>
             </div>
           </div>
         </section>
@@ -464,6 +464,13 @@
         </address>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>&times;</button>
+      </div>
+    </div>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
