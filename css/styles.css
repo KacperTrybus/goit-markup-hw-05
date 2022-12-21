@@ -11,6 +11,7 @@
   --border-header: #ececec;
   --icon-color: #afb1b8;
   --X-button: #e9e9ea;
+  --animation-hover: rgba(33, 150, 243, 0.9);
 }
 
 * {
@@ -267,17 +268,21 @@ body {
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
+  transition-property: visibility, opacity, transform;
 }
 .modal {
   position: fixed;
+  left: 50%;
+  top: 50%;
   width: 528px;
   height: 581px;
   background-color: white;
   transition-property: visibility, opacity, transform;
-  transition-duration: 3s;
-  /* transform: translateX(-50%) translateY(-50%); */
+  transform: translate(-50%, -50%);
+  transition-duration: 1s;
   border-radius: 4px;
 }
+
 .backdrop {
   background: rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -439,6 +444,30 @@ body {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+.project-item-box-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 49px 45px 49px 24px;
+  background-color: var(--animation-hover);
+  font-size: 18px;
+  line-height: 1.5;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item-box-overlay p:hover {
+  transform: translateY(0);
+}
 .project-item-cap {
   margin: 10px;
 }
@@ -560,3 +589,4 @@ header svg {
 .client-list-border:focus {
   border-color: var(--hover-color);
 }
+/*  animation */
