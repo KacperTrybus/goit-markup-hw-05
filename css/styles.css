@@ -24,11 +24,15 @@ body {
   max-width: 1600px;
   margin: 0px auto;
 }
+img {
+  display: block;
+  font-size: 0;
+}
 
 /* pseudoklasy */
 
-.nav-font:hover,
-.nav-font:focus {
+.nav-list a:hover,
+.nav-list a:focus {
   color: var(--hover-color);
 }
 .contact:hover,
@@ -83,16 +87,19 @@ body {
 .contact {
   text-decoration: none;
   color: var(--nr-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-font {
+.nav-list a {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--font-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .nav-list {
   list-style-type: none;
   display: inline-flex;
@@ -403,9 +410,7 @@ body {
   bottom: 70px;
   background: rgba(47, 48, 58, 0.8);
 }
-.tech-img {
-  display: block;
-}
+
 .team-picture-box {
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -444,10 +449,7 @@ body {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-img {
-  display: block;
-  font-size: 0;
-}
+
 .project-item-box-overlay {
   position: relative;
   overflow: hidden;
@@ -459,16 +461,18 @@ img {
   left: 0;
   position: absolute;
   padding: 49px 45px 49px 24px;
+  color: #fff;
   background-color: var(--animation-hover);
   font-size: 18px;
   line-height: 1.5;
+  letter-spacing: 0.03em;
   transform: translateY(100%);
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-item-box-overlay p:hover {
+.project-item-box:hover .overlay {
   transform: translateY(0);
 }
 .project-item-cap {
