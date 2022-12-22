@@ -294,12 +294,6 @@ img {
   color: #fff;
   letter-spacing: 0.03em;
 }
-.is-hidden {
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
-  transition-property: visibility, opacity, transform;
-}
 .modal {
   position: fixed;
   left: 50%;
@@ -307,10 +301,15 @@ img {
   width: 528px;
   height: 581px;
   background-color: white;
-  transition-property: visibility, opacity, transform;
   transform: translate(-50%, -50%);
-  transition-duration: 1s;
   border-radius: 4px;
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.1);
 }
 
 .backdrop {
@@ -320,7 +319,11 @@ img {
   position: fixed;
   left: 0;
   top: 0;
+  transform: scale(1);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-close-bt {
   position: relative;
   border: 1px solid var(--X-button);
