@@ -42,6 +42,7 @@ img {
 .foot-text:hover,
 .foot-text:focus {
   color: var(--hover-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .foot-text-portfolio:hover,
 .foot-text-portfolio:focus {
@@ -87,10 +88,9 @@ img {
 .contact {
   text-decoration: none;
   color: var(--nr-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-list a {
+.nav-list-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.17;
@@ -104,6 +104,28 @@ img {
   list-style-type: none;
   display: inline-flex;
   gap: 46px;
+}
+
+.active-page {
+  content: '';
+  color: var(--hover-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.active-page::after {
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: var(--hover-color);
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: 31px;
 }
 
 .nav-list-sec {
@@ -243,6 +265,7 @@ img {
   background-color: var(--hover-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-portfolio {
   color: var(--font-color);
@@ -429,6 +452,7 @@ img {
 .foot-mail {
   display: inline-flex;
   padding: 9px 0px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-list-box {
   display: flex;
@@ -445,10 +469,15 @@ img {
 .project-item-box {
   border: solid 1px var(--border-portfolio);
 }
-.project-item-box:hover {
+.project-item-box:hover,
+.project-item-box:hover .overlay {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transform: translateY(0);
 }
+/* .project-item-box:hover .overlay {
+  transform: translateY(0);
+} */
 
 .project-item-box-overlay {
   position: relative;
@@ -472,9 +501,6 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.project-item-box:hover .overlay {
-  transform: translateY(0);
-}
 .project-item-cap {
   margin: 10px;
 }
@@ -540,11 +566,13 @@ header svg {
 .team-icon-foot:hover,
 .team-icon-foot:focus {
   background-color: var(--hover-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-icon:hover,
 .team-icon:focus {
   background-color: var(--hover-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-ic {
   display: flex;
@@ -573,6 +601,7 @@ header svg {
 .client-list-icon {
   fill: var(--icon-color);
   padding: 17.71px 32px 14.25px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-list-icon:hover,
 .client-list-icon:focus {
