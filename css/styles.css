@@ -361,7 +361,7 @@ img {
 }
 .nav-box {
   display: flex;
-  margin: 32px 345px 32px 93px;
+  margin: 32px 345px 30px 93px;
   justify-content: center;
   align-items: center;
 }
